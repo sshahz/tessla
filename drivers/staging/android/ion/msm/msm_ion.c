@@ -690,9 +690,9 @@ long msm_ion_custom_ioctl(struct ion_client *client,
 	case ION_IOC_CLEAN_INV_CACHES:
 	{
 		unsigned long start, end;
-		struct ion_handle *handle = NULL;
-		int ret;
-		struct mm_struct *mm = current->active_mm;
+		struct ion_handle *handle = NULL; 
+		int ret; 
+		struct mm_struct *mm = current->active_mm; 
 
 		if (data.flush_data.handle > 0) {
 			mutex_lock(&client->lock);
